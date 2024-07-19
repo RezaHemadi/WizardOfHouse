@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddDeviceView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    var appState: AppState
     @Environment(\.dismiss) var dismiss
     var people: [WTPerson] {
         appState.people
@@ -91,5 +91,5 @@ struct AddDeviceView: View {
 }
 
 #Preview {
-    AddDeviceView()
+    AddDeviceView(appState: AppState())
 }

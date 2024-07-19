@@ -14,7 +14,6 @@
 		F54E5ED42C383983000F2B7A /* WizardOfHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5ED32C383983000F2B7A /* WizardOfHouseTests.swift */; };
 		F54E5EDE2C383983000F2B7A /* WizardOfHouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EDD2C383983000F2B7A /* WizardOfHouseUITests.swift */; };
 		F54E5EE02C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EDF2C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift */; };
-		F575CDBF2C46D656000212CB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F575CDBE2C46D656000212CB /* Router.swift */; };
 		F578E29C2C3B0BA2005FAE1B /* PersonSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578E29B2C3B0BA2005FAE1B /* PersonSelectionRow.swift */; };
 		F5B252AD2C383D8F00E8851D /* WTTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252AC2C383D8F00E8851D /* WTTab.swift */; };
 		F5B252AF2C383EBB00E8851D /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252AE2C383EBB00E8851D /* DevicesView.swift */; };
@@ -69,7 +68,6 @@
 		F54E5ED92C383983000F2B7A /* WizardOfHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WizardOfHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54E5EDD2C383983000F2B7A /* WizardOfHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardOfHouseUITests.swift; sourceTree = "<group>"; };
 		F54E5EDF2C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardOfHouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F575CDBE2C46D656000212CB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F578E29B2C3B0BA2005FAE1B /* PersonSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionRow.swift; sourceTree = "<group>"; };
 		F5B252AC2C383D8F00E8851D /* WTTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTTab.swift; sourceTree = "<group>"; };
 		F5B252AE2C383EBB00E8851D /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				F5B252B92C38411A00E8851D /* AppState.swift */,
-				F575CDBE2C46D656000212CB /* Router.swift */,
 				F5B252BB2C38414D00E8851D /* Models */,
 				F5B252AB2C383D4D00E8851D /* Views */,
 				F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */,
@@ -367,7 +364,6 @@
 				F5B252BF2C38418900E8851D /* WTPerson.swift in Sources */,
 				F5B252C72C38451B00E8851D /* DeviceRowView.swift in Sources */,
 				F5B252D32C385FE000E8851D /* AddRuleView.swift in Sources */,
-				F575CDBF2C46D656000212CB /* Router.swift in Sources */,
 				F5B252CB2C38470800E8851D /* WTEvent.swift in Sources */,
 				F5B252D12C38586900E8851D /* AddPersonView.swift in Sources */,
 				F5B252CD2C3848B200E8851D /* DeviceDetailView.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WTEnvironment: Identifiable {
+struct WTEnvironment: Identifiable, Hashable {
     // MARK: Properties
     let id = UUID()
     var description: String

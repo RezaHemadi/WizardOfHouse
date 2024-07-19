@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
+    @Environment(\.appState) var appState
     @State private var tab: WTTab = .devices
     
     // MARK: - View
@@ -34,7 +35,7 @@ struct ContentView: View {
                     Label("Rules", systemImage: "list.bullet.rectangle")
                 }
             
-            EnvironmentsView()
+            EnvironmentsView(appState: appState)
                 .tabItem {
                     Label("Environment", systemImage: "building.2")
                 }

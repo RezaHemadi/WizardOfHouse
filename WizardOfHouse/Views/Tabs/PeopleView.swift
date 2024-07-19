@@ -42,7 +42,7 @@ struct PeopleView: View {
                 }
             }
             .sheet(isPresented: $showAddPerson) {
-                AddPersonView()
+                AddPersonView(appState: appState)
             }
         }
     }

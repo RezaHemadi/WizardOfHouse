@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddNewEnvironmentView: View {
     // MARK: - Properties
+    var appState: AppState
     @Environment(\.dismiss) private var dismiss
     @State private var area: WTEnvironmentArea = .small
     @State private var description: String = ""
@@ -40,7 +41,7 @@ struct AddNewEnvironmentView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
-                        EnvironmentPeopleSelectionView(environment: environment)
+                        EnvironmentPeopleSelectionView(appState: appState, environment: environment, onCompletion: dismiss)
                     } label: {
                         Text("Next")
                     }
@@ -51,5 +52,5 @@ struct AddNewEnvironmentView: View {
 }
 
 #Preview {
-    AddNewEnvironmentView()
+    AddNewEnvironmentView(appState: AppState())
 }

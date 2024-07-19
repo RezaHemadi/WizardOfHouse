@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EnvironmentPeopleSelectionView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
-    @Environment(\.dismiss) var dismiss
+    var appState: AppState
+    let onCompletion: DismissAction?
     @State private var environment: WTEnvironment
     @State private var selectedPpl: Set<WTPerson>
     
@@ -20,11 +20,13 @@ struct EnvironmentPeopleSelectionView: View {
                                            area: environment.area,
                                            people: selectedPpl)
         appState.environments.append(newEnvironment)
-        dismiss()
+        onCompletion?()
     }
     
     // MARK: - Initialization
-    init(environment: WTEnvironment) {
+    init(appState: AppState, environment: WTEnvironment, onCompletion: DismissAction?) {
+        self.onCompletion = onCompletion
+        self.appState = appState
         self._environment = .init(initialValue: environment)
         self._selectedPpl = .init(initialValue: Set<WTPerson>())
     }
@@ -56,6 +58,6 @@ struct EnvironmentPeopleSelectionView: View {
 
 #Preview {
     NavigationStack {
-        EnvironmentPeopleSelectionView(environment: WTEnvironment(description: "description goes here", area: .medium, people: []))
+        EnvironmentPeopleSelectionView(appState: AppState(), environment: WTEnvironment(description: "description goes here", area: .medium, people: []), onCompletion: nil)
     }
 }

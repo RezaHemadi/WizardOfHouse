@@ -9,26 +9,19 @@ import SwiftUI
 
 struct EnvironmentsView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    @ObservedObject var appState: AppState
     @State private var showAddEnvironment: Bool = false
-    
-    // MARK: Helper Methods
-    private func deleteDevice(_ indexSet: IndexSet) {
-        appState.devices.remove(atOffsets: indexSet)
-    }
+    @State private var people: [String] = ["Reza"]
     
     // MARK: - View
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(appState.environments) { environment in
-                    NavigationLink {
-                        EnvironmentView(environment: environment)
-                    } label: {
-                        Text(environment.description)
-                    }
+            List($appState.environments, id: \.self) { $environment in
+                NavigationLink {
+                    EnvironmentView(environment: $environment)
+                } label: {
+                    Text($environment.wrappedValue.description)
                 }
-                .onDelete(perform: deleteDevice)
             }
             .navigationTitle("Environments")
             .toolbar {
@@ -39,12 +32,12 @@ struct EnvironmentsView: View {
                 }
             }
             .sheet(isPresented: $showAddEnvironment) {
-                AddNewEnvironmentView()
+                AddNewEnvironmentView(appState: appState)
             }
         }
     }
 }
 
 #Preview {
-    EnvironmentsView()
+    EnvironmentsView(appState: AppState())
 }

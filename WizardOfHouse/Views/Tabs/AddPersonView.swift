@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddPersonView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    var appState: AppState
     @Environment(\.dismiss) var dismiss
     @State private var name: String = ""
     @State private var bio: String = ""
@@ -42,5 +42,5 @@ struct AddPersonView: View {
 }
 
 #Preview {
-    AddPersonView()
+    AddPersonView(appState: AppState())
 }

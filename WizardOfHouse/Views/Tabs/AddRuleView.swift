@@ -10,7 +10,7 @@ import SwiftUI
 struct AddRuleView: View {
     // MARK: - Properties
     @Environment(\.dismiss) var dismiss
-    @Environment(\.appState) var appState
+    var appState: AppState
     @State private var ruleDescription: String = ""
     
     // MARK: - Helper Methods
@@ -42,5 +42,5 @@ struct AddRuleView: View {
 }
 
 #Preview {
-    AddRuleView()
+    AddRuleView(appState: AppState())
 }

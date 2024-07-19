@@ -35,7 +35,7 @@ struct RulesView: View {
                 }
             }
             .sheet(isPresented: $showAddRule) {
-                AddRuleView()
+                AddRuleView(appState: appState)
             }
         }
     }

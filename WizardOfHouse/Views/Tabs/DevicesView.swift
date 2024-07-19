@@ -39,7 +39,7 @@ struct DevicesView: View {
                 }
             }
             .sheet(isPresented: $showAddDevice) {
-                AddDeviceView()
+                AddDeviceView(appState: appState)
             }
         }
     }
