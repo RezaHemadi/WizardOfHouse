@@ -10,11 +10,11 @@ import Foundation
 struct WTEvent: Identifiable {
     var id = UUID()
     var description: String
-    var timestampe: Date
+    var timestamp: Date
 }
 
 extension WTEvent {
     static let SampleEvents: [WTEvent] = [
-        WTEvent(description: "Party", timestampe: Date.now)
+        WTEvent(description: "Party", timestamp: Date.now)
     ]
 }

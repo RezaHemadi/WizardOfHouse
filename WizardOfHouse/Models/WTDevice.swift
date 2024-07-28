@@ -15,6 +15,28 @@ struct WTDevice: Identifiable {
     var interface: String
     /// The person whom this device is assigned to
     var person: WTPerson?
+    
+    var typeDescription: String {
+        switch type {
+        case .onOff:
+            return "On/Off Device"
+        case .sensor:
+            return "Sensor"
+        }
+    }
+    
+    var stateOrValueDescription: String {
+        switch type {
+        case .onOff(let isOn):
+            if isOn {
+                return "On"
+            } else {
+                return "Off"
+            }
+        case .sensor(let value):
+            return value
+        }
+    }
 }
 
 extension WTDevice {

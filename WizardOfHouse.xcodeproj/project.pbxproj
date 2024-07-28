@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5174FA52C53FDD1000BA5D4 /* EventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5174FA42C53FDD1000BA5D4 /* EventsService.swift */; };
+		F5174FA82C54067B000BA5D4 /* GPTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5174FA72C54067B000BA5D4 /* GPTRequest.swift */; };
+		F5174FAA2C54070D000BA5D4 /* GPTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5174FA92C54070D000BA5D4 /* GPTMessage.swift */; };
+		F5174FAC2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5174FAB2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift */; };
+		F5174FAE2C540A69000BA5D4 /* GPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5174FAD2C540A69000BA5D4 /* GPTResponse.swift */; };
 		F54E5EC22C383980000F2B7A /* WizardOfHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */; };
 		F54E5EC42C383980000F2B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EC32C383980000F2B7A /* ContentView.swift */; };
 		F54E5EC62C383983000F2B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54E5EC52C383983000F2B7A /* Assets.xcassets */; };
@@ -37,6 +42,8 @@
 		F5B252D92C3862B000E8851D /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D82C3862B000E8851D /* EnvironmentView.swift */; };
 		F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */; };
 		F5B252DD2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */; };
+		F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */; };
+		F5D576082C4ADACE003E3702 /* GPTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576072C4ADACE003E3702 /* GPTClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5174FA42C53FDD1000BA5D4 /* EventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsService.swift; sourceTree = "<group>"; };
+		F5174FA72C54067B000BA5D4 /* GPTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTRequest.swift; sourceTree = "<group>"; };
+		F5174FA92C54070D000BA5D4 /* GPTMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTMessage.swift; sourceTree = "<group>"; };
+		F5174FAB2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTChatCompletionConfiguration.swift; sourceTree = "<group>"; };
+		F5174FAD2C540A69000BA5D4 /* GPTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTResponse.swift; sourceTree = "<group>"; };
 		F54E5EBE2C383980000F2B7A /* WizardOfHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizardOfHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardOfHouseApp.swift; sourceTree = "<group>"; };
 		F54E5EC32C383980000F2B7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +103,8 @@
 		F5B252D82C3862B000E8851D /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 		F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEnvironmentView.swift; sourceTree = "<group>"; };
 		F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPeopleSelectionView.swift; sourceTree = "<group>"; };
+		F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTNetworkLayer.swift; sourceTree = "<group>"; };
+		F5D576072C4ADACE003E3702 /* GPTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +132,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5174FA62C540617000BA5D4 /* GPTClient */ = {
+			isa = PBXGroup;
+			children = (
+				F5D576072C4ADACE003E3702 /* GPTClient.swift */,
+				F5174FA72C54067B000BA5D4 /* GPTRequest.swift */,
+				F5174FA92C54070D000BA5D4 /* GPTMessage.swift */,
+				F5174FAB2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift */,
+				F5174FAD2C540A69000BA5D4 /* GPTResponse.swift */,
+			);
+			path = GPTClient;
+			sourceTree = "<group>";
+		};
 		F54E5EB52C383980000F2B7A = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				F5B252B92C38411A00E8851D /* AppState.swift */,
+				F5174FA62C540617000BA5D4 /* GPTClient */,
+				F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */,
+				F5174FA42C53FDD1000BA5D4 /* EventsService.swift */,
 				F5B252BB2C38414D00E8851D /* Models */,
 				F5B252AB2C383D4D00E8851D /* Views */,
 				F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */,
@@ -353,8 +382,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B252CF2C384DA000E8851D /* AddDeviceView.swift in Sources */,
+				F5174FAC2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift in Sources */,
 				F5B252C32C3841CE00E8851D /* WTRule.swift in Sources */,
+				F5174FA82C54067B000BA5D4 /* GPTRequest.swift in Sources */,
+				F5D576082C4ADACE003E3702 /* GPTClient.swift in Sources */,
 				F5B252DD2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift in Sources */,
+				F5174FAE2C540A69000BA5D4 /* GPTResponse.swift in Sources */,
 				F5B252BD2C38415B00E8851D /* WTDevice.swift in Sources */,
 				F578E29C2C3B0BA2005FAE1B /* PersonSelectionRow.swift in Sources */,
 				F5B252D72C3861B400E8851D /* WTEnvironmentArea.swift in Sources */,
@@ -367,12 +400,15 @@
 				F5B252CB2C38470800E8851D /* WTEvent.swift in Sources */,
 				F5B252D12C38586900E8851D /* AddPersonView.swift in Sources */,
 				F5B252CD2C3848B200E8851D /* DeviceDetailView.swift in Sources */,
+				F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */,
 				F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */,
 				F5B252BA2C38411A00E8851D /* AppState.swift in Sources */,
 				F5B252B22C383EEF00E8851D /* PeopleView.swift in Sources */,
+				F5174FA52C53FDD1000BA5D4 /* EventsService.swift in Sources */,
 				F5B252C92C3845F100E8851D /* WTDeviceType.swift in Sources */,
 				F5B252D92C3862B000E8851D /* EnvironmentView.swift in Sources */,
 				F5B252AD2C383D8F00E8851D /* WTTab.swift in Sources */,
+				F5174FAA2C54070D000BA5D4 /* GPTMessage.swift in Sources */,
 				F5B252AF2C383EBB00E8851D /* DevicesView.swift in Sources */,
 				F54E5EC22C383980000F2B7A /* WizardOfHouseApp.swift in Sources */,
 				F5B252C12C3841BF00E8851D /* WTEnvironment.swift in Sources */,
