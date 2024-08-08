@@ -10,13 +10,13 @@ import SwiftUI
 struct AddRuleView: View {
     // MARK: - Properties
     @Environment(\.dismiss) var dismiss
-    var appState: AppState
+    @StateObject var wizardService: WizardService
     @State private var ruleDescription: String = ""
     
     // MARK: - Helper Methods
     private func addRule() {
         let rule = WTRule(description: ruleDescription)
-        appState.rules.append(rule)
+        wizardService.rules.append(rule)
         ruleDescription = ""
         dismiss()
     }
@@ -42,5 +42,5 @@ struct AddRuleView: View {
 }
 
 #Preview {
-    AddRuleView(appState: AppState())
+    AddRuleView(wizardService: .Sample)
 }

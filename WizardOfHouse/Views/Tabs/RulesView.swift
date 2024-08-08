@@ -9,19 +9,19 @@ import SwiftUI
 
 struct RulesView: View {
     // MARK: Properties
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
     @State private var showAddRule: Bool = false
     
     // MARK: - Helper Methods
     private func deleteRule(_ indexSet: IndexSet) {
-        appState.rules.remove(atOffsets: indexSet)
+        wizardService.rules.remove(atOffsets: indexSet)
     }
     
     // MARK: View
     var body: some View {
         NavigationStack {
             List {
-                ForEach(appState.rules) { rule in
+                ForEach(wizardService.rules) { rule in
                     Text(rule.description)
                 }
                 .onDelete(perform: deleteRule)
@@ -35,12 +35,12 @@ struct RulesView: View {
                 }
             }
             .sheet(isPresented: $showAddRule) {
-                AddRuleView(appState: appState)
+                AddRuleView(wizardService: wizardService)
             }
         }
     }
 }
 
 #Preview {
-    RulesView()
+    RulesView(wizardService: .Sample)
 }

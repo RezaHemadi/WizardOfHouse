@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WTEvent: Identifiable {
+struct WTEvent: Identifiable, Hashable {
     var id = UUID()
     var description: String
     var timestamp: Date

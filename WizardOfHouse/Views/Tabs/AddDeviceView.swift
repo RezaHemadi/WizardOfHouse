@@ -9,10 +9,10 @@ import SwiftUI
 
 struct AddDeviceView: View {
     // MARK: - Properties
-    var appState: AppState
+    @StateObject var wizardService: WizardService
     @Environment(\.dismiss) var dismiss
     var people: [WTPerson] {
-        appState.people
+        wizardService.people
     }
     @State private var deviceName: String  = ""
     @State private var deviceType: WTDeviceType = .onOff(isOn: false)
@@ -35,7 +35,7 @@ struct AddDeviceView: View {
                                  type: resolvedDeviceType,
                                  interface: deviceInterface,
                                  person: selectedPerson)
-        appState.devices.append(newDevice)
+        wizardService.devices.append(newDevice)
         dismiss()
     }
     
@@ -91,5 +91,6 @@ struct AddDeviceView: View {
 }
 
 #Preview {
-    AddDeviceView(appState: AppState())
+    let dependencyContainer = DIContainer()
+    return AddDeviceView(wizardService: dependencyContainer.wizardService)
 }

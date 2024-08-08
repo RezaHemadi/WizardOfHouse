@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct WizardOfHouseApp: App {
+    // MARK: - Properties
+    let dependencyContainer = DIContainer()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(wizardService: dependencyContainer.wizardService,
+                        eventsService: dependencyContainer.eventsService)
         }
     }
 }

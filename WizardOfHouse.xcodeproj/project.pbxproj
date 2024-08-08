@@ -26,7 +26,7 @@
 		F5B252B42C383EFA00E8851D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B32C383EFA00E8851D /* EventsView.swift */; };
 		F5B252B62C383F0600E8851D /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B52C383F0600E8851D /* RulesView.swift */; };
 		F5B252B82C38401000E8851D /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B72C38401000E8851D /* EnvironmentsView.swift */; };
-		F5B252BA2C38411A00E8851D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B92C38411A00E8851D /* AppState.swift */; };
+		F5B252BA2C38411A00E8851D /* WizardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B92C38411A00E8851D /* WizardService.swift */; };
 		F5B252BD2C38415B00E8851D /* WTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252BC2C38415B00E8851D /* WTDevice.swift */; };
 		F5B252BF2C38418900E8851D /* WTPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252BE2C38418900E8851D /* WTPerson.swift */; };
 		F5B252C12C3841BF00E8851D /* WTEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252C02C3841BF00E8851D /* WTEnvironment.swift */; };
@@ -42,6 +42,7 @@
 		F5B252D92C3862B000E8851D /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D82C3862B000E8851D /* EnvironmentView.swift */; };
 		F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */; };
 		F5B252DD2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */; };
+		F5D0977A2C56AE0700E6B9C1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D097792C56AE0700E6B9C1 /* DIContainer.swift */; };
 		F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */; };
 		F5D576082C4ADACE003E3702 /* GPTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576072C4ADACE003E3702 /* GPTClient.swift */; };
 /* End PBXBuildFile section */
@@ -87,7 +88,7 @@
 		F5B252B32C383EFA00E8851D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		F5B252B52C383F0600E8851D /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		F5B252B72C38401000E8851D /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
-		F5B252B92C38411A00E8851D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F5B252B92C38411A00E8851D /* WizardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardService.swift; sourceTree = "<group>"; };
 		F5B252BC2C38415B00E8851D /* WTDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTDevice.swift; sourceTree = "<group>"; };
 		F5B252BE2C38418900E8851D /* WTPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTPerson.swift; sourceTree = "<group>"; };
 		F5B252C02C3841BF00E8851D /* WTEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTEnvironment.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		F5B252D82C3862B000E8851D /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 		F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEnvironmentView.swift; sourceTree = "<group>"; };
 		F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPeopleSelectionView.swift; sourceTree = "<group>"; };
+		F5D097792C56AE0700E6B9C1 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTNetworkLayer.swift; sourceTree = "<group>"; };
 		F5D576072C4ADACE003E3702 /* GPTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,13 +169,14 @@
 		F54E5EC02C383980000F2B7A /* WizardOfHouse */ = {
 			isa = PBXGroup;
 			children = (
-				F5B252B92C38411A00E8851D /* AppState.swift */,
+				F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */,
+				F5D097792C56AE0700E6B9C1 /* DIContainer.swift */,
+				F5B252B92C38411A00E8851D /* WizardService.swift */,
+				F5174FA42C53FDD1000BA5D4 /* EventsService.swift */,
 				F5174FA62C540617000BA5D4 /* GPTClient */,
 				F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */,
-				F5174FA42C53FDD1000BA5D4 /* EventsService.swift */,
 				F5B252BB2C38414D00E8851D /* Models */,
 				F5B252AB2C383D4D00E8851D /* Views */,
-				F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */,
 				F54E5EC52C383983000F2B7A /* Assets.xcassets */,
 				F54E5EC72C383983000F2B7A /* WizardOfHouse.entitlements */,
 				F54E5EC82C383983000F2B7A /* Preview Content */,
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B252CF2C384DA000E8851D /* AddDeviceView.swift in Sources */,
+				F5D0977A2C56AE0700E6B9C1 /* DIContainer.swift in Sources */,
 				F5174FAC2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift in Sources */,
 				F5B252C32C3841CE00E8851D /* WTRule.swift in Sources */,
 				F5174FA82C54067B000BA5D4 /* GPTRequest.swift in Sources */,
@@ -402,7 +406,7 @@
 				F5B252CD2C3848B200E8851D /* DeviceDetailView.swift in Sources */,
 				F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */,
 				F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */,
-				F5B252BA2C38411A00E8851D /* AppState.swift in Sources */,
+				F5B252BA2C38411A00E8851D /* WizardService.swift in Sources */,
 				F5B252B22C383EEF00E8851D /* PeopleView.swift in Sources */,
 				F5174FA52C53FDD1000BA5D4 /* EventsService.swift in Sources */,
 				F5B252C92C3845F100E8851D /* WTDeviceType.swift in Sources */,

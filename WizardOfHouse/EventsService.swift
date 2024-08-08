@@ -11,13 +11,13 @@ import Combine
 class EventsService {
     // MARK: - Properties
     let gptClient: GPTClient
-    let appState: AppState
+    let wizardService: WizardService
     var streams: Set<AnyCancellable>
     
     // MARK: Initialization
-    init(gptClient: GPTClient, appState: AppState) {
+    init(gptClient: GPTClient, wizardService: WizardService) {
         self.gptClient = gptClient
-        self.appState = appState
+        self.wizardService = wizardService
         self.streams = Set<AnyCancellable>()
     }
     
@@ -38,7 +38,7 @@ class EventsService {
                 }
             } receiveValue: { receivedMessage in
                 let event = WTEvent(description: receivedMessage, timestamp: Date())
-                self.appState.events.append(event)
+                self.wizardService.events.append(event)
             }
             .store(in: &streams)
 
@@ -80,8 +80,8 @@ class EventsService {
             let deviceName = components[0]
             let stateOrValueComponent = components[1]
             
-            if let index = appState.devices.firstIndex(where: { $0.name.lowercased() == deviceName.lowercased() }) {
-                let device = appState.devices[index]
+            if let index = wizardService.devices.firstIndex(where: { $0.name.lowercased() == deviceName.lowercased() }) {
+                let device = wizardService.devices[index]
                 
                 var eventDescription = ""
                 
@@ -89,19 +89,19 @@ class EventsService {
                 case .onOff:
                     // For on/off devices, change the state based on the response
                     let isDeviceOn = stateOrValueComponent.lowercased() == "on"
-                    appState.devices[index].type = .onOff(isOn: isDeviceOn)
+                    wizardService.devices[index].type = .onOff(isOn: isDeviceOn)
                     eventDescription = "\(deviceName) is now \(isDeviceOn ? "On" : "Off")"
                     
                 case .sensor:
                     // For sensor devices, update the value based on the response
-                    appState.devices[index].type = .sensor(value: stateOrValueComponent)
+                    wizardService.devices[index].type = .sensor(value: stateOrValueComponent)
                     eventDescription = "\(deviceName) value is \(stateOrValueComponent)"
                 }
                 
                 if !eventDescription.isEmpty {
                     // Creating a new event for the update
                     let newEvent = WTEvent(description: eventDescription, timestamp: Date())
-                    appState.events.append(newEvent)
+                    wizardService.events.append(newEvent)
                 }
             } else {
                 #if DEBUG
@@ -115,7 +115,7 @@ class EventsService {
         var prompt = "Given the following devices, people, and rules in a smart home, with the current time of day and location, provide updates on device states and any new events:\n\n"
         prompt += "Devices:\n"
         
-        for device in appState.devices {
+        for device in wizardService.devices {
             let deviceTypeDescription = device.typeDescription
             let stateOrValueDescription = device.stateOrValueDescription
             prompt += "- \(device.name) (\(deviceTypeDescription), Interface: \(device.interface)) is \(stateOrValueDescription)\n"
@@ -123,17 +123,17 @@ class EventsService {
         
         prompt += "\nPeople:\n"
         
-        for person in appState.people {
+        for person in wizardService.people {
             prompt += "- \(person.name): \(person.bio)\n"
         }
         
         prompt += "\nRules:\n"
-        for rule in appState.rules {
+        for rule in wizardService.rules {
             prompt += "- \(rule.description)\n"
         }
         
         prompt += "\nTime of Day: \(formatCurrentTime())"
-        prompt += "Location: \(appState.address)"
+        prompt += "Location: \(wizardService.address)"
         
         return prompt
     }

@@ -10,14 +10,15 @@ import SwiftUI
 struct EnvironmentView: View {
     // MARK: - Properties
     @Environment(\.dismiss) var dismiss
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
     @Binding var environment: WTEnvironment
     @State private var description: String
     @State private var area: WTEnvironmentArea
     @State private var selectedPpl: Set<WTPerson>
     
     // MARK: - Initialization
-    init(environment: Binding<WTEnvironment>) {
+    init(wizardService: WizardService, environment: Binding<WTEnvironment>) {
+        self._wizardService = .init(wrappedValue: wizardService)
         self._environment = environment
         self.description = environment.wrappedValue.description
         self.area = environment.wrappedValue.area
@@ -43,7 +44,7 @@ struct EnvironmentView: View {
             }
             
             Section("Assigned People") {
-                ForEach(appState.people) { person in
+                ForEach(wizardService.people) { person in
                     PersonSelectionRow(person: person, selected: selectedPpl.contains(person))
                         .contentShape(Rectangle())
                         .onTapGesture {
@@ -67,5 +68,6 @@ struct EnvironmentView: View {
 }
 
 #Preview {
-    EnvironmentView(environment: .constant(WTEnvironment(description: "description goes here", area: .medium, people: [])))
+    EnvironmentView(wizardService: .Sample,
+                    environment: .constant(WTEnvironment(description: "description goes here", area: .medium, people: [])))
 }

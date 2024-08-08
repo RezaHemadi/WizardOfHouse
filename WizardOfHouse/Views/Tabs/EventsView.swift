@@ -9,24 +9,25 @@ import SwiftUI
 
 struct EventsView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
+    let eventsService: EventsService
     
     // MARK: - Helper Methods
     private func fetchEvents() {
-        fatalError("To be implemented")
+        eventsService.fetchNewEvents()
     }
     
     private func callSmartHome() {
-        fatalError("To be implemented")
+        eventsService.callSmartHome()
     }
     
     // MARK: - View
     var body: some View {
         NavigationStack {
-            List(appState.events) { event in
+            List(wizardService.events) { event in
                 VStack(alignment: .leading) {
                     Text(event.description)
-                    Text(event.timestampe, style: .date)
+                    Text(event.timestamp, style: .date)
                 }
             }
             .navigationTitle("Events")
@@ -45,5 +46,7 @@ struct EventsView: View {
 }
 
 #Preview {
-    EventsView()
+    let dependencyContainer = DIContainer()
+    return EventsView(wizardService: dependencyContainer.wizardService,
+                      eventsService: dependencyContainer.eventsService)
 }

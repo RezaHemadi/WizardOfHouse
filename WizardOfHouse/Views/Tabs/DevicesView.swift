@@ -9,19 +9,19 @@ import SwiftUI
 
 struct DevicesView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
     @State private var showAddDevice: Bool = false
     
     // MARK: Helper Methods
     private func deleteDevice(_ indexSet: IndexSet) {
-        appState.devices.remove(atOffsets: indexSet)
+        wizardService.devices.remove(atOffsets: indexSet)
     }
     
     // MARK: - View
     var body: some View {
         NavigationStack {
             List {
-                ForEach(appState.devices) { device in
+                ForEach(wizardService.devices) { device in
                     NavigationLink {
                         DeviceDetailView(device: device)
                     } label: {
@@ -39,12 +39,13 @@ struct DevicesView: View {
                 }
             }
             .sheet(isPresented: $showAddDevice) {
-                AddDeviceView(appState: appState)
+                AddDeviceView(wizardService: wizardService)
             }
         }
     }
 }
 
 #Preview {
-    DevicesView()
+    let dependencyContainer = DIContainer()
+    return DevicesView(wizardService: dependencyContainer.wizardService)
 }

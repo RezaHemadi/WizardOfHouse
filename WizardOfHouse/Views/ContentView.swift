@@ -9,33 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
+    let eventsService: EventsService
     @State private var tab: WTTab = .devices
     
     // MARK: - View
     var body: some View {
         TabView(selection: $tab) {
-            DevicesView()
+            DevicesView(wizardService: wizardService)
                 .tabItem {
                     Label("Devices", systemImage: "thermometer.transmission")
                 }
             
-            PeopleView()
+            PeopleView(wizardService: wizardService)
                 .tabItem {
                     Label("People", systemImage: "person.2")
                 }
             
-            EventsView()
+            EventsView(wizardService: wizardService, eventsService: eventsService)
                 .tabItem {
                     Label("Events", systemImage: "list.bullet.rectangle.portrait")
                 }
             
-            RulesView()
+            RulesView(wizardService: wizardService)
                 .tabItem {
                     Label("Rules", systemImage: "list.bullet.rectangle")
                 }
             
-            EnvironmentsView(appState: appState)
+            EnvironmentsView(wizardService: wizardService)
                 .tabItem {
                     Label("Environment", systemImage: "building.2")
                 }
@@ -44,5 +45,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    let dependencyContainer = DIContainer()
+    return ContentView(wizardService: dependencyContainer.wizardService,
+                       eventsService: dependencyContainer.eventsService)
 }

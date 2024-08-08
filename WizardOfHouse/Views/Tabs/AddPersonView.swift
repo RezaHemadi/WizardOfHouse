@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddPersonView: View {
     // MARK: - Properties
-    var appState: AppState
+    @StateObject var wizardService: WizardService
     @Environment(\.dismiss) var dismiss
     @State private var name: String = ""
     @State private var bio: String = ""
@@ -17,7 +17,7 @@ struct AddPersonView: View {
     // MARK: - Helper Methods
     private func addPerson() {
         let newPerson = WTPerson(name: name, bio: bio)
-        appState.people.append(newPerson)
+        wizardService.people.append(newPerson)
         dismiss()
     }
     
@@ -42,5 +42,6 @@ struct AddPersonView: View {
 }
 
 #Preview {
-    AddPersonView(appState: AppState())
+    let dependencyContainer = DIContainer()
+    return AddPersonView(wizardService: dependencyContainer.wizardService)
 }

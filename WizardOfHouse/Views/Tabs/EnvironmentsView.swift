@@ -9,16 +9,16 @@ import SwiftUI
 
 struct EnvironmentsView: View {
     // MARK: - Properties
-    @ObservedObject var appState: AppState
+    @StateObject var wizardService: WizardService
     @State private var showAddEnvironment: Bool = false
     @State private var people: [String] = ["Reza"]
     
     // MARK: - View
     var body: some View {
         NavigationStack {
-            List($appState.environments, id: \.self) { $environment in
+            List($wizardService.environments, id: \.self) { $environment in
                 NavigationLink {
-                    EnvironmentView(environment: $environment)
+                    EnvironmentView(wizardService: wizardService, environment: $environment)
                 } label: {
                     Text($environment.wrappedValue.description)
                 }
@@ -32,12 +32,13 @@ struct EnvironmentsView: View {
                 }
             }
             .sheet(isPresented: $showAddEnvironment) {
-                AddNewEnvironmentView(appState: appState)
+                AddNewEnvironmentView(wizardService: wizardService)
             }
         }
     }
 }
 
 #Preview {
-    EnvironmentsView(appState: AppState())
+    let dependencyContainer = DIContainer()
+    return EnvironmentsView(wizardService: dependencyContainer.wizardService)
 }

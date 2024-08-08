@@ -9,12 +9,12 @@ import SwiftUI
 
 struct PeopleView: View {
     // MARK: - Properties
-    @Environment(\.appState) var appState
+    @StateObject var wizardService: WizardService
     @State private var showAddPerson: Bool = false
     
     // MARK: - Helper Methods
     private func deletePerson(_ indexSet: IndexSet) {
-        appState.people.remove(atOffsets: indexSet)
+        wizardService.people.remove(atOffsets: indexSet)
     }
     
     // MARK: - View
@@ -22,7 +22,7 @@ struct PeopleView: View {
         NavigationStack {
             List {
                 Section("People") {
-                    ForEach(appState.people) { person in
+                    ForEach(wizardService.people) { person in
                         VStack(alignment: .leading) {
                             Text(person.name.capitalized)
                                 .font(.headline)
@@ -42,12 +42,12 @@ struct PeopleView: View {
                 }
             }
             .sheet(isPresented: $showAddPerson) {
-                AddPersonView(appState: appState)
+                AddPersonView(wizardService: wizardService)
             }
         }
     }
 }
 
 #Preview {
-    PeopleView()
+    PeopleView(wizardService: .Sample)
 }

@@ -29,11 +29,16 @@ class WTNetworkLayer {
         for (key, value) in headers {
             request.setValue(String(describing: value), forHTTPHeaderField: key)
         }
+        
         request.httpBody = body
         
         let publisher = URLSession.shared.dataTaskPublisher(for: request)
             .retry(3)
             .tryMap { receivedValue in
+                
+                let receivedPlainText = String(data: receivedValue.data, encoding: .utf8)
+                print(receivedPlainText!)
+                
                 guard let httpResponse = receivedValue.response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                     throw WTNetworkLayerError.badServerResponse
                 }
@@ -43,6 +48,7 @@ class WTNetworkLayer {
                 return receivedValue.data
             }
             .mapError { error -> WTNetworkLayerError in
+                print(error.localizedDescription)
                 if let clientError = error as? WTNetworkLayerError {
                     return clientError
                 } else {
