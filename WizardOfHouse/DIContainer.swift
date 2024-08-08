@@ -16,7 +16,7 @@ class DIContainer {
     
     // MARK: - Initialization
     init() {
-        wizardService = WizardService.Sample
+        wizardService = WizardService()
         gptClient = GPTClient()
         eventsService = EventsService(gptClient: gptClient, wizardService: wizardService)
     }
