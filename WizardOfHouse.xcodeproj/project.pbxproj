@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,29 +19,17 @@
 		F54E5ED42C383983000F2B7A /* WizardOfHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5ED32C383983000F2B7A /* WizardOfHouseTests.swift */; };
 		F54E5EDE2C383983000F2B7A /* WizardOfHouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EDD2C383983000F2B7A /* WizardOfHouseUITests.swift */; };
 		F54E5EE02C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E5EDF2C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift */; };
-		F578E29C2C3B0BA2005FAE1B /* PersonSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578E29B2C3B0BA2005FAE1B /* PersonSelectionRow.swift */; };
+		F588F6932CB7D15D0022D338 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588F6922CB7D15D0022D338 /* Color+Hex.swift */; };
+		F588F6952CB8260A0022D338 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F588F6942CB8260A0022D338 /* UIColor+Hex.swift */; };
 		F5B252AD2C383D8F00E8851D /* WTTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252AC2C383D8F00E8851D /* WTTab.swift */; };
-		F5B252AF2C383EBB00E8851D /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252AE2C383EBB00E8851D /* DevicesView.swift */; };
-		F5B252B22C383EEF00E8851D /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B12C383EEF00E8851D /* PeopleView.swift */; };
-		F5B252B42C383EFA00E8851D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B32C383EFA00E8851D /* EventsView.swift */; };
-		F5B252B62C383F0600E8851D /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B52C383F0600E8851D /* RulesView.swift */; };
-		F5B252B82C38401000E8851D /* EnvironmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B72C38401000E8851D /* EnvironmentsView.swift */; };
 		F5B252BA2C38411A00E8851D /* WizardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252B92C38411A00E8851D /* WizardService.swift */; };
 		F5B252BD2C38415B00E8851D /* WTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252BC2C38415B00E8851D /* WTDevice.swift */; };
 		F5B252BF2C38418900E8851D /* WTPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252BE2C38418900E8851D /* WTPerson.swift */; };
 		F5B252C12C3841BF00E8851D /* WTEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252C02C3841BF00E8851D /* WTEnvironment.swift */; };
 		F5B252C32C3841CE00E8851D /* WTRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252C22C3841CE00E8851D /* WTRule.swift */; };
-		F5B252C72C38451B00E8851D /* DeviceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252C62C38451B00E8851D /* DeviceRowView.swift */; };
 		F5B252C92C3845F100E8851D /* WTDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252C82C3845F100E8851D /* WTDeviceType.swift */; };
 		F5B252CB2C38470800E8851D /* WTEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252CA2C38470800E8851D /* WTEvent.swift */; };
-		F5B252CD2C3848B200E8851D /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252CC2C3848B200E8851D /* DeviceDetailView.swift */; };
-		F5B252CF2C384DA000E8851D /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252CE2C384DA000E8851D /* AddDeviceView.swift */; };
-		F5B252D12C38586900E8851D /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D02C38586900E8851D /* AddPersonView.swift */; };
-		F5B252D32C385FE000E8851D /* AddRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D22C385FE000E8851D /* AddRuleView.swift */; };
 		F5B252D72C3861B400E8851D /* WTEnvironmentArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D62C3861B400E8851D /* WTEnvironmentArea.swift */; };
-		F5B252D92C3862B000E8851D /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252D82C3862B000E8851D /* EnvironmentView.swift */; };
-		F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */; };
-		F5B252DD2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */; };
 		F5D0977A2C56AE0700E6B9C1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D097792C56AE0700E6B9C1 /* DIContainer.swift */; };
 		F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */; };
 		F5D576082C4ADACE003E3702 /* GPTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D576072C4ADACE003E3702 /* GPTClient.swift */; };
@@ -81,33 +69,29 @@
 		F54E5ED92C383983000F2B7A /* WizardOfHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WizardOfHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54E5EDD2C383983000F2B7A /* WizardOfHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardOfHouseUITests.swift; sourceTree = "<group>"; };
 		F54E5EDF2C383983000F2B7A /* WizardOfHouseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardOfHouseUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F578E29B2C3B0BA2005FAE1B /* PersonSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSelectionRow.swift; sourceTree = "<group>"; };
+		F588F6922CB7D15D0022D338 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		F588F6942CB8260A0022D338 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		F5B252AC2C383D8F00E8851D /* WTTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTTab.swift; sourceTree = "<group>"; };
-		F5B252AE2C383EBB00E8851D /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
-		F5B252B12C383EEF00E8851D /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
-		F5B252B32C383EFA00E8851D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		F5B252B52C383F0600E8851D /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
-		F5B252B72C38401000E8851D /* EnvironmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsView.swift; sourceTree = "<group>"; };
 		F5B252B92C38411A00E8851D /* WizardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardService.swift; sourceTree = "<group>"; };
 		F5B252BC2C38415B00E8851D /* WTDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTDevice.swift; sourceTree = "<group>"; };
 		F5B252BE2C38418900E8851D /* WTPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTPerson.swift; sourceTree = "<group>"; };
 		F5B252C02C3841BF00E8851D /* WTEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTEnvironment.swift; sourceTree = "<group>"; };
 		F5B252C22C3841CE00E8851D /* WTRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTRule.swift; sourceTree = "<group>"; };
-		F5B252C62C38451B00E8851D /* DeviceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRowView.swift; sourceTree = "<group>"; };
 		F5B252C82C3845F100E8851D /* WTDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTDeviceType.swift; sourceTree = "<group>"; };
 		F5B252CA2C38470800E8851D /* WTEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTEvent.swift; sourceTree = "<group>"; };
-		F5B252CC2C3848B200E8851D /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
-		F5B252CE2C384DA000E8851D /* AddDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
-		F5B252D02C38586900E8851D /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
-		F5B252D22C385FE000E8851D /* AddRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRuleView.swift; sourceTree = "<group>"; };
 		F5B252D62C3861B400E8851D /* WTEnvironmentArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTEnvironmentArea.swift; sourceTree = "<group>"; };
-		F5B252D82C3862B000E8851D /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
-		F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEnvironmentView.swift; sourceTree = "<group>"; };
-		F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPeopleSelectionView.swift; sourceTree = "<group>"; };
 		F5D097792C56AE0700E6B9C1 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		F5D576052C4AD524003E3702 /* WTNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTNetworkLayer.swift; sourceTree = "<group>"; };
 		F5D576072C4ADACE003E3702 /* GPTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F58340B72CE7243D0043A0BA /* Devices */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Devices; sourceTree = "<group>"; };
+		F58340B82CE724560043A0BA /* People */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = People; sourceTree = "<group>"; };
+		F58340C72CE72B370043A0BA /* Events */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Events; sourceTree = "<group>"; };
+		F58340C82CE72C960043A0BA /* Environments */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Environments; sourceTree = "<group>"; };
+		F58340C92CE740780043A0BA /* Rules */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Rules; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F54E5EBB2C383980000F2B7A /* Frameworks */ = {
@@ -169,6 +153,7 @@
 		F54E5EC02C383980000F2B7A /* WizardOfHouse */ = {
 			isa = PBXGroup;
 			children = (
+				F588F6912CB7D1420022D338 /* Utilities */,
 				F54E5EC12C383980000F2B7A /* WizardOfHouseApp.swift */,
 				F5D097792C56AE0700E6B9C1 /* DIContainer.swift */,
 				F5B252B92C38411A00E8851D /* WizardService.swift */,
@@ -209,6 +194,15 @@
 			path = WizardOfHouseUITests;
 			sourceTree = "<group>";
 		};
+		F588F6912CB7D1420022D338 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F588F6922CB7D15D0022D338 /* Color+Hex.swift */,
+				F588F6942CB8260A0022D338 /* UIColor+Hex.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F5B252AB2C383D4D00E8851D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,20 +216,11 @@
 		F5B252B02C383ED000E8851D /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				F5B252AE2C383EBB00E8851D /* DevicesView.swift */,
-				F5B252CE2C384DA000E8851D /* AddDeviceView.swift */,
-				F5B252CC2C3848B200E8851D /* DeviceDetailView.swift */,
-				F5B252C62C38451B00E8851D /* DeviceRowView.swift */,
-				F5B252B12C383EEF00E8851D /* PeopleView.swift */,
-				F5B252D02C38586900E8851D /* AddPersonView.swift */,
-				F5B252B32C383EFA00E8851D /* EventsView.swift */,
-				F5B252B52C383F0600E8851D /* RulesView.swift */,
-				F5B252D22C385FE000E8851D /* AddRuleView.swift */,
-				F5B252B72C38401000E8851D /* EnvironmentsView.swift */,
-				F5B252DA2C38634900E8851D /* AddNewEnvironmentView.swift */,
-				F5B252DC2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift */,
-				F578E29B2C3B0BA2005FAE1B /* PersonSelectionRow.swift */,
-				F5B252D82C3862B000E8851D /* EnvironmentView.swift */,
+				F58340C92CE740780043A0BA /* Rules */,
+				F58340C82CE72C960043A0BA /* Environments */,
+				F58340C72CE72B370043A0BA /* Events */,
+				F58340B82CE724560043A0BA /* People */,
+				F58340B72CE7243D0043A0BA /* Devices */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -268,6 +253,13 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F58340B72CE7243D0043A0BA /* Devices */,
+				F58340B82CE724560043A0BA /* People */,
+				F58340C72CE72B370043A0BA /* Events */,
+				F58340C82CE72C960043A0BA /* Environments */,
+				F58340C92CE740780043A0BA /* Rules */,
 			);
 			name = WizardOfHouse;
 			productName = WizardOfHouse;
@@ -318,7 +310,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					F54E5EBD2C383980000F2B7A = {
 						CreatedOnToolsVersion = 15.4;
@@ -384,39 +376,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B252CF2C384DA000E8851D /* AddDeviceView.swift in Sources */,
 				F5D0977A2C56AE0700E6B9C1 /* DIContainer.swift in Sources */,
 				F5174FAC2C540889000BA5D4 /* GPTChatCompletionConfiguration.swift in Sources */,
 				F5B252C32C3841CE00E8851D /* WTRule.swift in Sources */,
 				F5174FA82C54067B000BA5D4 /* GPTRequest.swift in Sources */,
 				F5D576082C4ADACE003E3702 /* GPTClient.swift in Sources */,
-				F5B252DD2C3864CC00E8851D /* EnvironmentPeopleSelectionView.swift in Sources */,
 				F5174FAE2C540A69000BA5D4 /* GPTResponse.swift in Sources */,
 				F5B252BD2C38415B00E8851D /* WTDevice.swift in Sources */,
-				F578E29C2C3B0BA2005FAE1B /* PersonSelectionRow.swift in Sources */,
 				F5B252D72C3861B400E8851D /* WTEnvironmentArea.swift in Sources */,
-				F5B252B82C38401000E8851D /* EnvironmentsView.swift in Sources */,
-				F5B252B62C383F0600E8851D /* RulesView.swift in Sources */,
 				F54E5EC42C383980000F2B7A /* ContentView.swift in Sources */,
+				F588F6952CB8260A0022D338 /* UIColor+Hex.swift in Sources */,
 				F5B252BF2C38418900E8851D /* WTPerson.swift in Sources */,
-				F5B252C72C38451B00E8851D /* DeviceRowView.swift in Sources */,
-				F5B252D32C385FE000E8851D /* AddRuleView.swift in Sources */,
+				F588F6932CB7D15D0022D338 /* Color+Hex.swift in Sources */,
 				F5B252CB2C38470800E8851D /* WTEvent.swift in Sources */,
-				F5B252D12C38586900E8851D /* AddPersonView.swift in Sources */,
-				F5B252CD2C3848B200E8851D /* DeviceDetailView.swift in Sources */,
 				F5D576062C4AD524003E3702 /* WTNetworkLayer.swift in Sources */,
-				F5B252DB2C38634900E8851D /* AddNewEnvironmentView.swift in Sources */,
 				F5B252BA2C38411A00E8851D /* WizardService.swift in Sources */,
-				F5B252B22C383EEF00E8851D /* PeopleView.swift in Sources */,
 				F5174FA52C53FDD1000BA5D4 /* EventsService.swift in Sources */,
 				F5B252C92C3845F100E8851D /* WTDeviceType.swift in Sources */,
-				F5B252D92C3862B000E8851D /* EnvironmentView.swift in Sources */,
 				F5B252AD2C383D8F00E8851D /* WTTab.swift in Sources */,
 				F5174FAA2C54070D000BA5D4 /* GPTMessage.swift in Sources */,
-				F5B252AF2C383EBB00E8851D /* DevicesView.swift in Sources */,
 				F54E5EC22C383980000F2B7A /* WizardOfHouseApp.swift in Sources */,
 				F5B252C12C3841BF00E8851D /* WTEnvironment.swift in Sources */,
-				F5B252B42C383EFA00E8851D /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +467,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -548,6 +529,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -575,6 +557,7 @@
 				CODE_SIGN_ENTITLEMENTS = WizardOfHouse/WizardOfHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WizardOfHouse/Preview Content\"";
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -613,6 +596,7 @@
 				CODE_SIGN_ENTITLEMENTS = WizardOfHouse/WizardOfHouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WizardOfHouse/Preview Content\"";
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -646,10 +630,10 @@
 		F54E5EE72C383983000F2B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -669,10 +653,10 @@
 		F54E5EE82C383983000F2B7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -692,9 +676,9 @@
 		F54E5EEA2C383983000F2B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
@@ -714,9 +698,9 @@
 		F54E5EEB2C383983000F2B7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X3GC3DENUG;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;

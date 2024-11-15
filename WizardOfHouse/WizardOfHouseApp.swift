@@ -16,6 +16,15 @@ struct WizardOfHouseApp: App {
         WindowGroup {
             ContentView(wizardService: dependencyContainer.wizardService,
                         eventsService: dependencyContainer.eventsService)
+                .onAppear {
+                    UITabBar.appearance().backgroundColor = UIColor(red: 179.0/255.0,
+                                                                    green: 63.0/255.0,
+                                                                    blue: 98.0/255,
+                                                                    alpha: 1.0)
+                    UITabBar.appearance().unselectedItemTintColor = UIColor.white
+                    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.UIColorFromRGB(0xEFD9CE)]
+                    UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.UIColorFromRGB(0xEFD9CE)]
+                }
         }
     }
 }

@@ -20,27 +20,33 @@ struct ContentView: View {
                 .tabItem {
                     Label("Devices", systemImage: "thermometer.transmission")
                 }
+                .tag(WTTab.devices)
             
             PeopleView(wizardService: wizardService)
                 .tabItem {
                     Label("People", systemImage: "person.2")
                 }
+                .tag(WTTab.people)
             
             EventsView(wizardService: wizardService, eventsService: eventsService)
                 .tabItem {
                     Label("Events", systemImage: "list.bullet.rectangle.portrait")
                 }
+                .tag(WTTab.events)
             
             RulesView(wizardService: wizardService)
                 .tabItem {
                     Label("Rules", systemImage: "list.bullet.rectangle")
                 }
+                .tag(WTTab.rules)
             
             EnvironmentsView(wizardService: wizardService)
                 .tabItem {
                     Label("Environment", systemImage: "building.2")
                 }
+                .tag(WTTab.environment)
         }
+        .tint(Color(hex: "0C0A3E"))
     }
 }
 

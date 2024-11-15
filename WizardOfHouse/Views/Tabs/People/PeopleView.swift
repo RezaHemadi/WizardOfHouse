@@ -21,24 +21,38 @@ struct PeopleView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("People") {
-                    ForEach(wizardService.people) { person in
-                        VStack(alignment: .leading) {
+                ForEach(wizardService.people) { person in
+                    VStack(alignment: .leading) {
+                        HStack {
                             Text(person.name.capitalized)
                                 .font(.headline)
-                            Text(person.bio)
-                                .font(.subheadline)
+                                .foregroundStyle(.white)
+                            
+                            Spacer()
+                            
+                            if let age = person.age {
+                                Text(String(age))
+                                    .font(.footnote)
+                                    .foregroundStyle(Color(hex: "EFD9CE"))
+                            }
                         }
+                        Text(person.bio)
+                            .font(.subheadline)
+                            .foregroundStyle(.white)
                     }
-                    .onDelete(perform: deletePerson)
+                    .listRowBackground(Color.white.opacity(0.3))
                 }
+                .onDelete(perform: deletePerson)
             }
+            .scrollContentBackground(.hidden)
+            .background(Color(hex: "892774"))
             .navigationTitle("People")
             .toolbar {
                 Button {
                     showAddPerson = true
                 } label: {
                     Image(systemName: "plus")
+                        .foregroundStyle(Color(hex: "F3C677"))
                 }
             }
             .sheet(isPresented: $showAddPerson) {

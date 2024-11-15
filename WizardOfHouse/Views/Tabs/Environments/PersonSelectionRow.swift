@@ -14,9 +14,11 @@ struct PersonSelectionRow: View {
     var body: some View {
         HStack {
             Text(person.name)
+                .foregroundStyle(.white)
             Spacer()
             if selected {
                 Image(systemName: "checkmark")
+                    .foregroundStyle(Color(hex: "F3C677"))
             }
         }
     }

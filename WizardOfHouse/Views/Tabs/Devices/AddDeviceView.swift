@@ -19,6 +19,7 @@ struct AddDeviceView: View {
     @State private var isOn: Bool = false
     @State private var deviceInterface: String = ""
     @State private var selectedPerson: WTPerson?
+    @FocusState private var deviceNameFocused: Bool
     
     private var resolvedDeviceType: WTDeviceType {
         switch deviceType {
@@ -44,12 +45,18 @@ struct AddDeviceView: View {
         NavigationStack {
             Form {
                 TextField("Device Name", text: $deviceName)
+                    .foregroundStyle(.white)
+                    .tint(Color.blue)
+                    .listRowBackground(Color.white.opacity(0.3))
+                
                 Picker("Type", selection: $deviceType) {
                     Text("On/Off")
                         .tag(WTDeviceType.onOff(isOn: isOn))
+                    
                     Text("Sensor")
                         .tag(WTDeviceType.sensor(value: ""))
                 }
+                .listRowBackground(Color.white.opacity(0.3))
                 .pickerStyle(.segmented)
                 
                 switch deviceType {
@@ -58,33 +65,45 @@ struct AddDeviceView: View {
                 case .onOff(let isOn):
                     Toggle(isOn: $isOn) {
                         Text("Initial State")
+                            .foregroundStyle(.white)
                     }
+                    .listRowBackground(Color.white.opacity(0.3))
                 }
                 
-                Section("Device Interface") {
-                    TextEditor(text: $deviceInterface)
-                }
+                TextField("Device Interface", text: $deviceInterface)
+                    .foregroundStyle(Color.white)
+                    .listRowBackground(Color.white.opacity(0.3))
                 
                 Section("Assign To Person") {
                     Picker("Person", selection: $selectedPerson) {
                         Text("None")
+                            .foregroundStyle(Color(hex: "0C0A3E"))
                             .tag(nil as WTPerson?)
                         ForEach(people) { person in
                             Text(person.name)
-                                .tag(person as? WTPerson?)
+                                .foregroundStyle(Color(hex: "0C0A3E"))
+                                .tag(person as? WTPerson)
                         }
                     }
+                    .foregroundStyle(.white)
+                    .listRowBackground(Color.white.opacity(0.3))
                 }
+                .foregroundStyle(Color(hex: "F3C677"))
                 
                 Button("Add Device") {
                     addDevice()
                 }
+                .foregroundStyle(Color(hex: "F3C677"))
+                .listRowBackground(Color.white.opacity(0.3))
             }
+            .scrollContentBackground(.hidden)
+            .background(Color(hex: "972F6E"))
             .navigationTitle("Add Device")
             .toolbar {
                 Button("Cancel") {
                     dismiss()
                 }
+                .foregroundStyle(Color(hex: "F9564F"))
             }
         }
     }

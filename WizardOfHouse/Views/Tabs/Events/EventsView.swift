@@ -27,18 +27,26 @@ struct EventsView: View {
             List(wizardService.events) { event in
                 VStack(alignment: .leading) {
                     Text(event.description)
+                        .foregroundStyle(Color(hex: "0C0A3E"))
+                    
                     Text(event.timestamp, style: .date)
+                        .foregroundStyle(Color(hex: "0C0A3E"))
                 }
             }
             .navigationTitle("Events")
+            .scrollContentBackground(.hidden)
+            .background(Color(hex: "892774"))
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Fetch Events") {
                         fetchEvents()
                     }
+                    .foregroundStyle(Color(hex: "F3C677"))
+                    
                     Button("Call Smart Home") {
                         callSmartHome()
                     }
+                    .foregroundStyle(Color(hex: "F3C677"))
                 }
             }
         }

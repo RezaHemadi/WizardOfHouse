@@ -17,6 +17,11 @@ struct DevicesView: View {
         wizardService.devices.remove(atOffsets: indexSet)
     }
     
+    init(wizardService: WizardService) {
+        self._wizardService = .init(wrappedValue: wizardService)
+        
+    }
+    
     // MARK: - View
     var body: some View {
         NavigationStack {
@@ -30,12 +35,15 @@ struct DevicesView: View {
                 }
                 .onDelete(perform: deleteDevice)
             }
+            .scrollContentBackground(.hidden)
+            .background(Color(hex: "892774"))
             .navigationTitle("Devices")
             .toolbar {
                 Button {
                     showAddDevice = true
                 } label: {
                     Image(systemName: "plus")
+                        .foregroundStyle(Color(hex: "F3C677"))
                 }
             }
             .sheet(isPresented: $showAddDevice) {
@@ -47,5 +55,5 @@ struct DevicesView: View {
 
 #Preview {
     let dependencyContainer = DIContainer()
-    return DevicesView(wizardService: dependencyContainer.wizardService)
+    DevicesView(wizardService: dependencyContainer.wizardService)
 }

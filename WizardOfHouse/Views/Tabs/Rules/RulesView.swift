@@ -27,11 +27,14 @@ struct RulesView: View {
                 .onDelete(perform: deleteRule)
             }
             .navigationTitle("Rules")
+            .scrollContentBackground(.hidden)
+            .background(Color(hex: "892774"))
             .toolbar {
                 Button {
                     showAddRule.toggle()
                 } label: {
                     Image(systemName: "plus")
+                        .foregroundStyle(Color(hex: "F3C677"))
                 }
             }
             .sheet(isPresented: $showAddRule) {
